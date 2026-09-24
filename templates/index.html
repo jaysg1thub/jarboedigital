@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarboe Digital LLC | Next-Gen Enterprise Automation Studio</title>
+    
+    <!-- Engine A: Script CDN -->
+    <script src="https://tailwindcss.com"></script>
+    
+    <!-- Engine B: Standard CSS Backup Link (Failsafe for Throttled Networks) -->
+    <link href="https://cloudflare.com" rel="stylesheet">
+
+    <script>
+        // Failsafe configuration wrapper
+        if (window.tailwind) {
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            brandDark: '#090d16',
+                            brandCard: '#111827',
+                            brandAccentBlue: '#3b82f6',
+                            brandAccentTeal: '#0d9488',
+                            brandAccentPurple: '#a855f7'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brandDark text-gray-100 font-sans antialiased min-h-screen flex flex-col justify-between" style="background-color: #090d16; color: #f3f4f6; padding: 40px; font-family: sans-serif;">
+
+    <!-- Header Navigation -->
+    <header class="border-b border-gray-800 bg-brandDark/80 backdrop-blur sticky top-0 z-40">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="h-8 w-8 rounded bg-gradient-to-tr from-brandAccentBlue to-brandAccentPurple flex items-center justify-center font-bold text-white tracking-wider">J</div>
+                <span class="text-xl font-bold tracking-tight text-white">JARBOE <span class="text-brandAccentBlue">DIGITAL</span></span>
+            </div>
+            <div class="text-xs text-gray-400 font-mono bg-gray-900 border border-gray-800 px-3 py-1 rounded">
+                EIN: Verified
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-6xl mx-auto px-6 py-16 flex-grow">
+        
+        <!-- Hero Section -->
+        <section class="text-center max-w-3xl mx-auto mb-20" style="text-align: center; margin-top: 50px;">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight" style="color: #ffffff; font-size: 32px; font-weight: bold;">
+                Building the Future of Enterprise Data Automation
+            </h1>
+
+            <p class="text-lg text-gray-400 leading-relaxed">
+                Jarboe Digital LLC engineers elite, micro-SaaS utility pipelines, high-density analytics workbenches, and data extraction engines tailored for Real Estate, Asset Velocity, and Legal Compliance.
+            </p>
+        </section>
+
+        <!-- The Three Pillars Portfolio Showcase Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            
+            <!-- Pillar 1: Real Estate -->
+            <div class="bg-brandCard border border-gray-800 rounded-xl p-6 transition-all duration-300 hover:border-brandAccentTeal hover:translate-y-[-4px]">
+                <div class="w-10 h-10 rounded-lg bg-brandAccentTeal/10 flex items-center justify-center text-brandAccentTeal mb-4 font-bold text-lg">01</div>
+                <h3 class="text-xl font-bold text-white mb-2">AgentFlow CRM</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                    High-efficiency automated pipeline architecture engineered to completely eliminate transaction deal fatigue for modern real estate brokerages.
+                </p>
+                <span class="text-xs font-mono px-2 py-1 bg-brandAccentTeal/10 text-brandAccentTeal rounded">Real Estate Focus</span>
+            </div>
+
+            <!-- Pillar 2: Stocks & Crypto -->
+            <div class="bg-brandCard border border-gray-800 rounded-xl p-6 transition-all duration-300 hover:border-brandAccentBlue hover:translate-y-[-4px]">
+                <div class="w-10 h-10 rounded-lg bg-brandAccentBlue/10 flex items-center justify-center text-brandAccentBlue mb-4 font-bold text-lg">02</div>
+                <h3 class="text-xl font-bold text-white mb-2">MarketPulse AI</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                    Forward-looking market velocity platform combining real-time blockchain whale ledger tracking with predictive volatility squeeze analytics.
+                </p>
+                <span class="text-xs font-mono px-2 py-1 bg-brandAccentBlue/10 text-brandAccentBlue rounded">Asset Analytics</span>
+            </div>
+
+            <!-- Pillar 3: Law & Audit -->
+            <div class="bg-brandCard border border-gray-800 rounded-xl p-6 transition-all duration-300 hover:border-brandAccentPurple hover:translate-y-[-4px]">
+                <div class="w-10 h-10 rounded-lg bg-brandAccentPurple/10 flex items-center justify-center text-brandAccentPurple mb-4 font-bold text-lg">03</div>
+                <h3 class="text-xl font-bold text-white mb-2">LeaseShield AI</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                    Intelligent document ingestion and risk extraction system designed to parse, index, and audit dense commercial agreements in under 10 seconds.
+                </p>
+                <span class="text-xs font-mono px-2 py-1 bg-brandAccentPurple/10 text-brandAccentPurple rounded">Legal Compliance</span>
+            </div>
+
+        </section>
+
+    </main>
+        <!-- Footer Area (The Stripe Compliance Guardrail) -->
+    <footer class="border-t border-gray-800 bg-brandCard/50 py-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-sm text-gray-500 font-mono">
+                &copy; 2026 Jarboe Digital LLC. All rights reserved.
+            </div>
+            
+            <!-- JavaScript Trigger Links for Stripe Bot Audits -->
+            <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400 font-medium">
+                <button onclick="openModal('terms')" class="hover:text-brandAccentBlue transition">Terms of Service</button>
+                <button onclick="openModal('privacy')" class="hover:text-brandAccentBlue transition">Privacy Policy</button>
+                <button onclick="openModal('refunds')" class="hover:text-brandAccentBlue transition">Refund Policy</button>
+                <a href="mailto:support@jarboedigital.com" class="hover:text-brandAccentBlue transition">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Pop-up Modal Box Structure -->
+    <div id="legalModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center z-50 p-4">
+        <div class="bg-brandCard border border-gray-800 w-full max-w-xl rounded-xl shadow-2xl p-6 relative overflow-hidden">
+            <div class="flex justify-between items-start mb-4">
+                <div>
+                    <h2 id="modalTitle" class="text-2xl font-bold text-white">Policy Title</h2>
+                    <p class="text-xs text-gray-500 mt-1 font-mono">Last Updated: <span id="modalDate">Date</span></p>
+                </div>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-white font-bold text-xl px-2">&times;</button>
+            </div>
+            <div class="border-t border-gray-800 my-4"></div>
+            <p id="modalContent" class="text-gray-300 text-sm leading-relaxed mb-6">
+                Policy content injection area...
+            </p>
+            <div class="flex justify-end">
+                <button onclick="closeModal()" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white font-medium rounded-lg text-sm transition">
+                    Acknowledge & Close
+                </button>
+            </div>
+        </div>
+    </div>
+        <!-- Invisible Data Docking Bay for Flask -->
+    <div id="flask-data-bridge" data-policies='{{ policies|tojson }}' class="hidden"></div>
+
+    <!-- Embedded Modal Routing Logic -->
+    <script>
+        // Read the string directly from the HTML attribute to stop VS Code from complaining
+        const dataBridge = document.getElementById('flask-data-bridge');
+        const policies = JSON.parse(dataBridge.getAttribute('data-policies') || '{}');
+
+        function openModal(policyKey) {
+            const data = policies[policyKey];
+            if (data) {
+                document.getElementById('modalTitle').innerText = data.title;
+                document.getElementById('modalDate').innerText = data.last_updated;
+                document.getElementById('modalContent').innerText = data.content;
+                
+                const modal = document.getElementById('legalModal');
+                modal.classList.remove('hidden');
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('legalModal');
+            modal.classList.add('hidden');
+        }
+
+        // Close on clicking outside the card boundary box
+        window.onclick = function(event) {
+            const modal = document.getElementById('legalModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+</body>
+</html>

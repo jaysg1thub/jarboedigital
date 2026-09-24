@@ -1,0 +1,492 @@
+/* --- Master Global Resets & Typography --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0c0d0e; /* Deep technical charcoal gray */
+    color: #e4e6eb; /* Soft white to reduce eye strain */
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- Typography Overrides --- */
+h1, h2, h3 {
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+}
+
+p {
+    font-weight: 300;
+    color: #a0a5ad;
+}
+
+/* --- Header / Small Logo Navigation --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background-color: rgba(12, 13, 14, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #1c1e22;
+}
+
+header .logo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+}
+
+header nav a {
+    color: #a0a5ad;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+header nav a:hover {
+    color: #ffffff;
+}
+
+header nav a.cta-nav {
+    border: 1px solid #3a3f47;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+}
+
+header nav a.cta-nav:hover {
+    background-color: #ffffff;
+    color: #0c0d0e;
+    border-color: #ffffff;
+}
+
+/* --- Hero Section --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    padding-top: 80px;
+    border-bottom: 1px solid #1c1e22;
+}
+
+.hero-container {
+    max-width: 800px;
+}
+
+.hero .tagline {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: #52dd7d; /* Clean, terminal-green accent pulse */
+    letter-spacing: 0.15em;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+}
+
+/* --- Buttons --- */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #0c0d0e;
+}
+
+.btn-primary:hover {
+    background-color: #e4e6eb;
+}
+
+.btn-secondary {
+    border: 1px solid #3a3f47;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #1c1e22;
+    border-color: #52dd7d;
+}
+
+/* --- Core Expertise Matrix Grid --- */
+.services, .products {
+    padding: 6rem 5%;
+    border-bottom: 1px solid #1c1e22;
+}
+
+.services h2, .products h2 {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: -0.02em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: #121417;
+    border: 1px solid #1c1e22;
+    padding: 2.5rem;
+    border-radius: 6px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    border-color: #3a3f47;
+    transform: translateY(-4px);
+}
+
+.card-icon {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Digital Product Row Layout --- */
+.product-row {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.product-item {
+    border-left: 2px solid #3a3f47;
+    padding-left: 1.5rem;
+    transition: border-color 0.3s ease;
+}
+
+.product-item:hover {
+    border-color: #52dd7d;
+}
+
+.product-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Footer --- */
+footer {
+    padding: 3rem 5%;
+    text-align: center;
+    background-color: #08090a;
+}
+
+footer p {
+    font-size: 0.8rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.2rem; }
+    header nav { display: none; } /* Keeps it highly minimalist on mobile devices */
+}
+
+/* --- Enterprise Tech Stack Ribbon Styles --- */
+.tech-ribbon {
+    background-color: #090a0b; /* Slightly darker than background for depth */
+    border-top: 1px solid #1c1e22;
+    border-bottom: 1px solid #1c1e22;
+    padding: 1.5rem 5%;
+    display: flex;
+    align-items: center;
+}
+
+.ribbon-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.ribbon-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: #52dd7d; /* Matches your clean terminal green accent track */
+    letter-spacing: 0.15em;
+    font-weight: 500;
+}
+
+.ribbon-items {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.ribbon-item {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #565d66; /* Subtly dimmed text to keep focus clean */
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+/* On hover, the tech stack pops into a clean white typography highlight */
+.ribbon-item:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .ribbon-container { flex-direction: column; align-items: flex-start; }
+    .ribbon-items { gap: 1.5rem; }
+}
+/* --- Premium Subscription Pricing Grid Styles --- */
+.pricing {
+    padding: 6rem 5%;
+    border-bottom: 1px solid #1c1e22;
+    background-color: #0c0d0e;
+}
+
+.pricing h2 {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: -0.02em;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.pricing-card {
+    background-color: #121417;
+    border: 1px solid #1c1e22;
+    padding: 3rem 2.5rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Elevates card on user hover */
+.pricing-card:hover {
+    border-color: #3a3f47;
+    transform: translateY(-4px);
+}
+
+/* Subtle boundary accent border highlight for your flagship AI monthly tier */
+.pricing-card.premium-card {
+    border-color: #2e333d;
+    background-color: #14171c;
+}
+.pricing-card.premium-card:hover {
+    border-color: #52dd7d; /* Terminal green pulse accent glow */
+}
+
+.price-tier {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: #565d66;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.price-tier.terminal-green {
+    color: #52dd7d;
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.price-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.price-amount span {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #a0a5ad;
+    margin-left: 0.25rem;
+}
+
+.price-desc {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    min-height: 70px; /* Keeps card alignment balanced */
+}
+
+.price-features {
+    list-style: none;
+    margin-bottom: 2.5rem;
+    flex-grow: 1; /* Pushes the CTA buttons to align at the bottom card margin */
+}
+
+.price-features li {
+    font-size: 0.85rem;
+    color: #a0a5ad;
+    margin-bottom: 0.75rem;
+    font-weight: 300;
+}
+
+.price-features li strong {
+    color: #ffffff;
+}
+
+.pricing-btn {
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-size: 0.85rem;
+    padding: 0.7rem 0;
+}
+/* --- Glassmorphism Contact Form Styles --- */
+.contact-section {
+    padding: 6rem 5%;
+    background-color: #090a0b; /* Matching your dark tech ribbon backdrop */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #1c1e22;
+}
+
+.contact-glass-panel {
+    background: rgba(18, 20, 23, 0.6); /* Translucent plate baseline */
+    border: 1px solid rgba(58, 63, 71, 0.4);
+    backdrop-filter: blur(12px); /* High-end blurred glass effect */
+    -webkit-backdrop-filter: blur(12px);
+    padding: 3.5rem;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.contact-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: #52dd7d; /* Terminal green accent */
+    letter-spacing: 0.15em;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.contact-glass-panel h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-glass-panel p {
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+    max-width: 650px;
+}
+
+/* --- Form Fields & Inputs --- */
+.intake-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.form-group label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+}
+
+.form-group input, .form-group textarea {
+    background-color: #0c0d0e;
+    border: 1px solid #1c1e22;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #52dd7d; /* Glows terminal green on user engagement */
+    box-shadow: 0 0 8px rgba(82, 221, 125, 0.15);
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder {
+    color: #4a4f56;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .form-row { flex-direction: column; gap: 1.5rem; }
+    .contact-glass-panel { padding: 2rem; }
+}
