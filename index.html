@@ -89,32 +89,37 @@
         </div>
     </section>
 
-        <!-- Blurred-Glass Customer Intake Form -->
-    <section id="contact" class="contact-section">
-        <div class="contact-glass-panel">
-            <span class="contact-tag">SECURE INTERCEPT GATEWAY</span>
-            <h2>Initiate an Enterprise Automation Project</h2>
-            <p>Ready to minimize your network cutover windows or architect custom AI database pipelines? Drop your parameters below to connect with our engineering team.</p>
-            
-            <form class="intake-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Jarboe Digital Gateway: Parameters logged successfully!');">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="client-name">Name / Enterprise</label>
-                        <input type="text" id="client-name" placeholder="Jay Jarboe" required>
+    <!-- Interactive Blurred-Glass Modal Core -->
+    <div id="contact-modal" class="modal-overlay">
+        <section id="contact" class="contact-section">
+            <div class="contact-glass-panel">
+                <!-- ❌ The Interactive Close Button Icon -->
+                <button type="button" id="close-modal-btn" class="close-modal-btn">&times;</button>
+                
+                <span class="contact-tag">SECURE INTERCEPT GATEWAY</span>
+                <h2>Initiate an Enterprise Automation Project</h2>
+                <p>Ready to minimize your network cutover windows or architect custom AI database pipelines? Drop your parameters below to connect with our engineering team.</p>
+                
+                <form class="intake-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Jarboe Digital Gateway: Parameters logged successfully!'); document.getElementById('contact-modal').classList.remove('active');">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="client-name">Name / Enterprise</label>
+                            <input type="text" id="client-name" placeholder="Jay Jarboe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="client-email">Email Coordinate</label>
+                            <input type="email" id="client-email" placeholder="jay@jarboedigital.com" required>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="client-email">Email Coordinate</label>
-                        <input type="email" id="client-email" placeholder="jay@jarboedigital.com" required>
+                        <label for="project-scope">Infrastructure Parameter / Project Scope</label>
+                        <textarea id="project-scope" rows="4" placeholder="Describe your database architecture, GraphQL schema requirements, or desired Ansible automated lifecycle workflows..." required></textarea>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="project-scope">Infrastructure Parameter / Project Scope</label>
-                    <textarea id="project-scope" rows="4" placeholder="Describe your database architecture, GraphQL schema requirements, or desired Ansible automated lifecycle workflows..." required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary submit-btn">Submit Architecture Scope</button>
-            </form>
-        </div>
-    </section>
+                    <button type="submit" class="btn btn-primary submit-btn">Submit Architecture Scope</button>
+                </form>
+            </div>
+        </section>
+    </div>
 
     <!-- Simple Footer Section -->
     <footer>
@@ -152,7 +157,7 @@
                     <li>· Cross-Platform Cloud Sync</li>
                 </ul>
                 <!-- Points to your live Stripe payment routing vault link -->
-                <a href="https://stripe.com" class="btn btn-primary pricing-btn">Activate Premium</a>
+                <a href="https://buy.stripe.com/8x26oH5Uje0f5O3brv5sA00" class="btn btn-primary pricing-btn">Activate Premium</a>
             </div>
 
             <!-- Premium Annual Card -->
@@ -173,6 +178,33 @@
     </section>
 
     </footer>
+
+        <!-- Interactive Modal Close & Escape Key Logic -->
+    <script>
+        const modal = document.getElementById('contact-modal');
+        const closeBtn = document.getElementById('close-modal-btn');
+        const initiateBtns = document.querySelectorAll('a[href="#contact"]');
+
+        // 1. Open the blurred window when an "Initiate" button is clicked
+        initiateBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('active');
+            });
+        });
+
+        // 2. Click the 'X' button to instantly close it
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        // 3. Press the 'Esc' key to instantly close it!
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+            }
+        });
+    </script>
 
 </body>
 </html>
